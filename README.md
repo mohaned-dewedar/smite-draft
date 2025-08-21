@@ -13,7 +13,6 @@ What I created:
 Quick start (requires Node.js 18+):
 
 ```bash
-cd /home/momo/draft
 npm install
 npm run dev
 ```
