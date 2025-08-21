@@ -148,49 +148,78 @@ export default function App(){
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-2xl font-bold">Smite Draft — Interactive Prototype</h1>
-          <div className="flex gap-2">
+        <div className="flex justify-between items-center mb-8">
+          <div>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Smite Draft Tool
+            </h1>
+            <p className="text-gray-400 mt-1">Conquest Draft</p>
+          </div>
+          <div className="flex gap-3">
             <button 
               onClick={undoLastAction}
               disabled={actionHistory.length === 0}
-              className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-4 py-2 rounded font-semibold"
+              className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white px-5 py-2.5 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-blue-500/25"
             >
-              Undo (Backspace)
+              ↶ Undo
             </button>
             <button 
               onClick={resetDraft}
-              className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold"
+              className="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-red-500/25"
             >
-              Reset Draft
+              🔄 Reset
             </button>
           </div>
         </div>
-        <div className="mt-6">
-          <h2 className="text-lg font-semibold">Bans</h2>
-          <div className="flex gap-6 mt-2">
+        {/* Draft Status */}
+        <div className="text-center mb-6">
+          <div className="inline-flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-full border border-gray-700">
+            {current ? (
+              <>
+                <div className={`w-3 h-3 rounded-full ${current.team === 'ORDER' ? 'bg-blue-500' : 'bg-red-500'} animate-pulse`}></div>
+                <span className="text-lg font-medium">
+                  <span className={current.team === 'ORDER' ? 'text-blue-400' : 'text-red-400'}>
+                    {current.team}
+                  </span>
+                  <span className="text-gray-300 mx-2">is</span>
+                  <span className="text-yellow-400 font-semibold">
+                    {current.action === 'BAN' ? 'BANNING' : 'PICKING'}
+                  </span>
+                </span>
+              </>
+            ) : (
+              <>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <span className="text-lg font-medium text-green-400">Draft Complete!</span>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* Ban Section */}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold mb-4 text-center">Banned Gods</h2>
+          <div className="flex gap-6 justify-center">
             <BanList title="Order Bans" bans={orderBans} />
             <BanList title="Chaos Bans" bans={chaosBans} />
           </div>
         </div>
 
-        <div className="mb-2">Turn: <span className="font-semibold">{current ? `${current.team} is ${current.action}ING` : 'Draft complete'}</span></div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+          <div className="lg:col-span-1">
             <TeamPanel title="ORDER" picks={orderPicks} bans={orderBans} active={current?.team==='ORDER'} />
           </div>
 
           <div className="col-span-1 lg:col-span-3">
-            <div className="bg-gray-800 rounded p-3">
-            <FilterBar roleFilter={roleFilter} setRoleFilter={setRoleFilter} />
-            <GodGrid gods={gods} onSelectGod={onSelectGod} disabledIds={pickedOrBannedIds} roleFilter={roleFilter} setRoleFilter={setRoleFilter} />
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-5 border border-gray-700 shadow-xl">
+              <FilterBar roleFilter={roleFilter} setRoleFilter={setRoleFilter} />
+              <GodGrid gods={gods} onSelectGod={onSelectGod} disabledIds={pickedOrBannedIds} roleFilter={roleFilter} setRoleFilter={setRoleFilter} />
             </div>
           </div>
 
-          <div>
+          <div className="lg:col-span-1">
             <TeamPanel title="CHAOS" picks={chaosPicks} bans={chaosBans} active={current?.team==='CHAOS'} rightAligned />
           </div>
         </div>
