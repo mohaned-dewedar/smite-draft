@@ -1,0 +1,706 @@
+[
+  {
+    "id": "god_achilles",
+    "name": "Achilles",
+    "pantheon": "Greek",
+    "title": "Hero of the Trojan War",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Achilles%28S2%29_Default_Icon.png/96px-T_Achilles%28S2%29_Default_Icon.png?a8640",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Achilles"
+  },
+  {
+    "id": "god_agni",
+    "name": "Agni",
+    "pantheon": "Hindu",
+    "title": "God of Fire",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Agni%28S2%29_Default_Icon.png/96px-T_Agni%28S2%29_Default_Icon.png?c114e",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Agni"
+  },
+  {
+    "id": "god_aladdin",
+    "name": "Aladdin",
+    "pantheon": "Tales of Arabia",
+    "title": "The Sultan",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Aladdin%28S2%29_Default_Icon.png/96px-T_Aladdin%28S2%29_Default_Icon.png?90e18",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Aladdin"
+  },
+  {
+    "id": "god_amaterasu",
+    "name": "Amaterasu",
+    "pantheon": "Japanese",
+    "title": "The Shining Light",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Amaterasu%28S2%29_Default_Icon.png/96px-T_Amaterasu%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Amaterasu"
+  },
+  {
+    "id": "god_anhur",
+    "name": "Anhur",
+    "pantheon": "Egyptian",
+    "title": "Slayer of Enemies",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Anhur%28S2%29_Default_Icon.png/96px-T_Anhur%28S2%29_Default_Icon.png?85022",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Anhur"
+  },
+  {
+    "id": "god_anubis",
+    "name": "Anubis",
+    "pantheon": "Egyptian",
+    "title": "God of the Dead",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Anubis%28S2%29_Default_Icon.png/96px-T_Anubis%28S2%29_Default_Icon.png?275dd",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Anubis"
+  },
+  {
+    "id": "god_aphrodite",
+    "name": "Aphrodite",
+    "pantheon": "Greek",
+    "title": "Goddess of Beauty",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Aphrodite%28S2%29_Default_Icon.png/96px-T_Aphrodite%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Aphrodite"
+  },
+  {
+    "id": "god_apollo",
+    "name": "Apollo",
+    "pantheon": "Greek",
+    "title": "God of Music",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Apollo%28S2%29_Default_Icon.png/96px-T_Apollo%28S2%29_Default_Icon.png?c95f2",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Apollo"
+  },
+  {
+    "id": "god_ares",
+    "name": "Ares",
+    "pantheon": "Greek",
+    "title": "God of War",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Ares%28S2%29_Default_Icon.png/96px-T_Ares%28S2%29_Default_Icon.png?ac0fe",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Ares"
+  },
+  {
+    "id": "god_artemis",
+    "name": "Artemis",
+    "pantheon": "Greek",
+    "title": "Goddess of the Hunt",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Artemis%28S2%29_Default_Icon.png/96px-T_Artemis%28S2%29_Default_Icon.png?8669a",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Artemis"
+  },
+  {
+    "id": "god_athena",
+    "name": "Athena",
+    "pantheon": "Greek",
+    "title": "Goddess of Wisdom",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Athena%28S2%29_Default_Icon.png/96px-T_Athena%28S2%29_Default_Icon.png?a156c",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Athena"
+  },
+  {
+    "id": "god_awilix",
+    "name": "Awilix",
+    "pantheon": "Maya",
+    "title": "Goddess of the Moon",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Awilix%28S2%29_Default_Icon.png/96px-T_Awilix%28S2%29_Default_Icon.png?3141c",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Awilix"
+  },
+  {
+    "id": "god_bacchus",
+    "name": "Bacchus",
+    "pantheon": "Roman",
+    "title": "God of Wine",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Bacchus%28S2%29_Default_Icon.png/96px-T_Bacchus%28S2%29_Default_Icon.png?3baa6",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Bacchus"
+  },
+  {
+    "id": "god_baron_samedi",
+    "name": "Baron Samedi",
+    "pantheon": "Voodoo",
+    "title": "God of Life and Death",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Baron_Samedi%28S2%29_Default_Icon.png/96px-T_Baron_Samedi%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Baron_Samedi"
+  },
+  {
+    "id": "god_bellona",
+    "name": "Bellona",
+    "pantheon": "Roman",
+    "title": "Goddess of War",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Bellona%28S2%29_Default_Icon.png/96px-T_Bellona%28S2%29_Default_Icon.png?8a6f7",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Bellona"
+  },
+  {
+    "id": "god_cabrakan",
+    "name": "Cabrakan",
+    "pantheon": "Maya",
+    "title": "Destroyer of Mountains",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Cabrakan%28S2%29_Default_Icon.png/96px-T_Cabrakan%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Cabrakan"
+  },
+  {
+    "id": "god_cerberus",
+    "name": "Cerberus",
+    "pantheon": "Greek",
+    "title": "Warden of the Underworld",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Cerberus%28S2%29_Default_Icon.png/96px-T_Cerberus%28S2%29_Default_Icon.png?e04b1",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Cerberus"
+  },
+  {
+    "id": "god_cernunnos",
+    "name": "Cernunnos",
+    "pantheon": "Celtic",
+    "title": "The Horned God",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Cernunnos%28S2%29_Default_Icon.png/96px-T_Cernunnos%28S2%29_Default_Icon.png?6f390",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Cernunnos"
+  },
+  {
+    "id": "god_chaac",
+    "name": "Chaac",
+    "pantheon": "Maya",
+    "title": "God of Rain",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Chaac%28S2%29_Default_Icon.png/96px-T_Chaac%28S2%29_Default_Icon.png?7b8c5",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Chaac"
+  },
+  {
+    "id": "god_cupid",
+    "name": "Cupid",
+    "pantheon": "Roman",
+    "title": "God of Love",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Cupid%28S2%29_Default_Icon.png/96px-T_Cupid%28S2%29_Default_Icon.png?2c510",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Cupid"
+  },
+  {
+    "id": "god_danzaburou",
+    "name": "Danzaburou",
+    "pantheon": "Japanese",
+    "title": "The Legendary Tanuki",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Danzaburou%28S2%29_Default_Icon.png/96px-T_Danzaburou%28S2%29_Default_Icon.png?b3a4d",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Danzaburou"
+  },
+  {
+    "id": "god_fenrir",
+    "name": "Fenrir",
+    "pantheon": "Norse",
+    "title": "The Unbound",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Fenrir%28S2%29_Default_Icon.png/96px-T_Fenrir%28S2%29_Default_Icon.png?66794",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Fenrir"
+  },
+  {
+    "id": "god_ganesha",
+    "name": "Ganesha",
+    "pantheon": "Hindu",
+    "title": "God of Success",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Ganesha_Default_Icon.png/96px-T_Ganesha_Default_Icon.png?512d5",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Ganesha"
+  },
+  {
+    "id": "god_geb",
+    "name": "Geb",
+    "pantheon": "Egyptian",
+    "title": "God of the Earth",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Geb%28S2%29_Default_Icon.png/96px-T_Geb%28S2%29_Default_Icon.png?b3a4d",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Geb"
+  },
+  {
+    "id": "god_guan_yu",
+    "name": "Guan Yu",
+    "pantheon": "Chinese",
+    "title": "Saint of War",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Guan_Yu%28S2%29_Default_Icon.png/96px-T_Guan_Yu%28S2%29_Default_Icon.png?bc648",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Guan_Yu"
+  },
+  {
+    "id": "god_hades",
+    "name": "Hades",
+    "pantheon": "Greek",
+    "title": "King of the Underworld",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Hades%28S2%29_Default_Icon.png/96px-T_Hades%28S2%29_Default_Icon.png?056c7",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Hades"
+  },
+  {
+    "id": "god_hecate",
+    "name": "Hecate",
+    "pantheon": "Greek",
+    "title": "Goddess of Sorcery",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Hecate%28S2%29_Default_Icon.png/96px-T_Hecate%28S2%29_Default_Icon.png?7efca",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Hecate"
+  },
+  {
+    "id": "god_hercules",
+    "name": "Hercules",
+    "pantheon": "Roman",
+    "title": "Champion of Rome",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Hercules%28S2%29_Default_Icon.png/96px-T_Hercules%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Hercules"
+  },
+  {
+    "id": "god_hou_yi",
+    "name": "Hou Yi",
+    "pantheon": "Chinese",
+    "title": "Defender of the Earth",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_HouYi_Default_Icon.png/96px-T_HouYi_Default_Icon.png?2765c",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Hou_Yi"
+  },
+  {
+    "id": "god_hua_mulan",
+    "name": "Hua Mulan",
+    "pantheon": "Chinese",
+    "title": "The Ascendant Warrior",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Hua_Mulan%28S2%29_Default_Icon.png/96px-T_Hua_Mulan%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Hua_Mulan"
+  },
+  {
+    "id": "god_hun_batz",
+    "name": "Hun Batz",
+    "pantheon": "Maya",
+    "title": "The Howler Monkey God",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Hun_Batz%28S2%29_Default_Icon.png/96px-T_Hun_Batz%28S2%29_Default_Icon.png?3f007",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Hun_Batz"
+  },
+  {
+    "id": "god_izanami",
+    "name": "Izanami",
+    "pantheon": "Japanese",
+    "title": "Matron of the Dead",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Izanami%28S2%29_Default_Icon.png/96px-T_Izanami%28S2%29_Default_Icon.png?b3a4d",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Izanami"
+  },
+  {
+    "id": "god_janus",
+    "name": "Janus",
+    "pantheon": "Roman",
+    "title": "God of Portals and Transitions",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Janus_Default_Icon.png/96px-T_Janus_Default_Icon.png?1685a",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Janus"
+  },
+  {
+    "id": "god_jing_wei",
+    "name": "Jing Wei",
+    "pantheon": "Chinese",
+    "title": "The Oathkeeper",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_JingWei%28S2%29_Default_Icon.png/96px-T_JingWei%28S2%29_Default_Icon.png?8d169",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Jing_Wei"
+  },
+  {
+    "id": "god_kali",
+    "name": "Kali",
+    "pantheon": "Hindu",
+    "title": "Goddess of Destruction",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Kali%28S2%29_Default_Icon.png/96px-T_Kali%28S2%29_Default_Icon.png?70288",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Kali"
+  },
+  {
+    "id": "god_khepri",
+    "name": "Khepri",
+    "pantheon": "Egyptian",
+    "title": "The Dawn Bringer",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Khepri%28S2%29_Default_Icon.png/96px-T_Khepri%28S2%29_Default_Icon.png?b3a4d",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Khepri"
+  },
+  {
+    "id": "god_kukulkan",
+    "name": "Kukulkan",
+    "pantheon": "Maya",
+    "title": "Serpent of the Nine Winds",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Kukulkan%28S2%29_Default_Icon.png/96px-T_Kukulkan%28S2%29_Default_Icon.png?d4251",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Kukulkan"
+  },
+  {
+    "id": "god_loki",
+    "name": "Loki",
+    "pantheon": "Norse",
+    "title": "The Trickster God",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Loki%28S2%29_Default_Icon.png/96px-T_Loki%28S2%29_Default_Icon.png?a44d0",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Loki"
+  },
+  {
+    "id": "god_medusa",
+    "name": "Medusa",
+    "pantheon": "Greek",
+    "title": "The Gorgon",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Medusa%28S2%29_Default_Icon.png/96px-T_Medusa%28S2%29_Default_Icon.png?b3a4d",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Medusa"
+  },
+  {
+    "id": "god_mercury",
+    "name": "Mercury",
+    "pantheon": "Roman",
+    "title": "Messenger of the Gods",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Mercury_Default_Icon.png/96px-T_Mercury_Default_Icon.png?cbce8",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Mercury"
+  },
+  {
+    "id": "god_merlin",
+    "name": "Merlin",
+    "pantheon": "Arthurian",
+    "title": "The Master Wizard",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Merlin%28S2%29_Default_Icon.png/96px-T_Merlin%28S2%29_Default_Icon.png?2013a",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Merlin"
+  },
+  {
+    "id": "god_mordred",
+    "name": "Mordred",
+    "pantheon": "Arthurian",
+    "title": "Breaker of the Round Table",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Mordred%28S2%29_Default_Icon.png/96px-T_Mordred%28S2%29_Default_Icon.png?cfb59",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Mordred"
+  },
+  {
+    "id": "god_neith",
+    "name": "Neith",
+    "pantheon": "Egyptian",
+    "title": "Weaver of Fate",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Neith%28S2%29_Default_Icon.png/96px-T_Neith%28S2%29_Default_Icon.png?73218",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Neith"
+  },
+  {
+    "id": "god_nemesis",
+    "name": "Nemesis",
+    "pantheon": "Greek",
+    "title": "Goddess of Vengeance",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Nemesis%28S2%29_Default_Icon.png/96px-T_Nemesis%28S2%29_Default_Icon.png?b3a4d",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Nemesis"
+  },
+  {
+    "id": "god_nu_wa",
+    "name": "Nu Wa",
+    "pantheon": "Chinese",
+    "title": "Guardian of Heaven",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Nu_Wa%28S2%29_Default_Icon.png/96px-T_Nu_Wa%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Nu_Wa"
+  },
+  {
+    "id": "god_odin",
+    "name": "Odin",
+    "pantheon": "Norse",
+    "title": "The Allfather",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Odin%28S2%29_Default_Icon.png/96px-T_Odin%28S2%29_Default_Icon.png?2ee32",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Odin"
+  },
+  {
+    "id": "god_pele",
+    "name": "Pele",
+    "pantheon": "Polynesian",
+    "title": "Goddess of Volcanoes",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Pele%28S2%29_Default_Icon.png/96px-T_Pele%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Pele"
+  },
+  {
+    "id": "god_poseidon",
+    "name": "Poseidon",
+    "pantheon": "Greek",
+    "title": "God of the Oceans",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Poseidon%28S2%29_Default_Icon.png/96px-T_Poseidon%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Poseidon"
+  },
+  {
+    "id": "god_princess_bari",
+    "name": "Princess Bari",
+    "pantheon": "Korean",
+    "title": "The Divine Mudang",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Princess_Bari%28S2%29_Default_Icon.png/96px-T_Princess_Bari%28S2%29_Default_Icon.png?1a2f0",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Princess_Bari"
+  },
+  {
+    "id": "god_ra",
+    "name": "Ra",
+    "pantheon": "Egyptian",
+    "title": "Sun God",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Ra%28S2%29_Default_Icon.png/96px-T_Ra%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Ra"
+  },
+  {
+    "id": "god_rama",
+    "name": "Rama",
+    "pantheon": "Hindu",
+    "title": "Seventh Avatar of Vishnu",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Rama%28S2%29_Default_Icon.png/96px-T_Rama%28S2%29_Default_Icon.png?a8743",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Rama"
+  },
+  {
+    "id": "god_scylla",
+    "name": "Scylla",
+    "pantheon": "Greek",
+    "title": "Horror of the Sea",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Scylla_Default_Icon.png/96px-T_Scylla_Default_Icon.png?43b80",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Scylla"
+  },
+  {
+    "id": "god_sobek",
+    "name": "Sobek",
+    "pantheon": "Egyptian",
+    "title": "God of the Nile",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Sobek%28S2%29_Default_Icon.png/96px-T_Sobek%28S2%29_Default_Icon.png?b3a4d",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Sobek"
+  },
+  {
+    "id": "god_sol",
+    "name": "Sol",
+    "pantheon": "Norse",
+    "title": "Goddess of the Sun",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Sol%28S2%29_Default_Icon.png/96px-T_Sol%28S2%29_Default_Icon.png?e37a0",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Sol"
+  },
+  {
+    "id": "god_sun_wukong",
+    "name": "Sun Wukong",
+    "pantheon": "Chinese",
+    "title": "The Monkey King",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_SunWukong_Default_Icon.png/96px-T_SunWukong_Default_Icon.png?303e7",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Sun_Wukong"
+  },
+  {
+    "id": "god_susano",
+    "name": "Susano",
+    "pantheon": "Japanese",
+    "title": "God of the Summer Storm",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Susano%28S2%29_Default_Icon.png/96px-T_Susano%28S2%29_Default_Icon.png?24b0a",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Susano"
+  },
+  {
+    "id": "god_thanatos",
+    "name": "Thanatos",
+    "pantheon": "Greek",
+    "title": "Hand of Death",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Thanatos%28S2%29_Default_Icon.png/96px-T_Thanatos%28S2%29_Default_Icon.png?bb1ee",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Thanatos"
+  },
+  {
+    "id": "god_the_morrigan",
+    "name": "The Morrigan",
+    "pantheon": "Celtic",
+    "title": "Phantom Queen",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_The_Morrigan%28S2%29_Default_Icon.png/96px-T_The_Morrigan%28S2%29_Default_Icon.png?188e1",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/The_Morrigan"
+  },
+  {
+    "id": "god_thor",
+    "name": "Thor",
+    "pantheon": "Norse",
+    "title": "God of Thunder",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Thor%28S2%29_Default_Icon.png/96px-T_Thor%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Thor"
+  },
+  {
+    "id": "god_ullr",
+    "name": "Ullr",
+    "pantheon": "Norse",
+    "title": "The Glorious One",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Ullr%28S2%29_Default_Icon.png/96px-T_Ullr%28S2%29_Default_Icon.png?a1516",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Ullr"
+  },
+  {
+    "id": "god_vulcan",
+    "name": "Vulcan",
+    "pantheon": "Roman",
+    "title": "Smith of the Gods",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Vulcan%28S2%29_Default_Icon.png/96px-T_Vulcan%28S2%29_Default_Icon.png?68221",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Vulcan"
+  },
+  {
+    "id": "god_yemoja",
+    "name": "Yemoja",
+    "pantheon": "Yoruba",
+    "title": "Goddess of Rivers",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Yemoja%28S2%29_Default_Icon.png/96px-T_Yemoja%28S2%29_Default_Icon.png?b3a4d",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Yemoja"
+  },
+  {
+    "id": "god_ymir",
+    "name": "Ymir",
+    "pantheon": "Norse",
+    "title": "Father of the Frost Giants",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Ymir%28S2%29_Default_Icon.png/96px-T_Ymir%28S2%29_Default_Icon.png?fc417",
+    "role": [
+      "Support"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Ymir"
+  },
+  {
+    "id": "god_zeus",
+    "name": "Zeus",
+    "pantheon": "Greek",
+    "title": "God of the Sky",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Zeus%28S2%29_Default_Icon.png/96px-T_Zeus%28S2%29_Default_Icon.png?d376a",
+    "role": [
+      "Mid"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Zeus"
+  }
+]
