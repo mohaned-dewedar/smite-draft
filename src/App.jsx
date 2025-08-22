@@ -5,7 +5,7 @@ import FilterBar from './components/FilterBar'
 import BanList from './components/BanList'
 import gods from './data/gods_merged_local.json'
 import { useSession } from './hooks/useSession'
-import { useDraftSync } from './hooks/useDraftSync'
+import { useSocketSync } from './hooks/useSocketSync'
 
 // Draft sequence is configurable. For this scaffolding we use a simplified sequence:
 // O = Order, C = Chaos, BAN/PICK
@@ -41,8 +41,8 @@ export default function App(){
     actionHistory: []
   }
 
-  // Use sync hook for online sessions, local state for offline
-  const { state, setState, isLoading } = useDraftSync(sessionId, initialState)
+  // Use socket sync hook for online sessions, local state for offline
+  const { state, setState, isLoading, isConnected, sendDraftAction, sendTurnUpdate } = useSocketSync(sessionId, initialState)
   
   // Destructure state for easier access
   const { orderPicks, chaosPicks, orderBans, chaosBans, seqIndex, actionHistory } = state
@@ -83,7 +83,13 @@ export default function App(){
   },[orderPicks, chaosPicks, orderBans, chaosBans])
 
   function advance(){
-    setSeqIndex(i=>Math.min(DRAFT_SEQUENCE.length-1, i+1))
+    const newSeqIndex = Math.min(DRAFT_SEQUENCE.length-1, seqIndex+1)
+    setSeqIndex(newSeqIndex)
+    
+    // Send turn update via socket if online
+    if (sessionId && isConnected) {
+      sendTurnUpdate(newSeqIndex)
+    }
   }
 
   function resetDraft(){
@@ -145,14 +151,18 @@ export default function App(){
     if(pickedOrBannedIds.has(god.id)) return
 
     let actionRecord = {
-      action: current.action,
-      team: current.team,
-      god: god
+      type: current.action.toLowerCase(),
+      team: current.team.toLowerCase(),
+      god: god,
+      seqIndex: seqIndex + 1
     }
 
     if(current.action === 'BAN'){
-      if(current.team === 'ORDER') setOrderBans(b=>[...b, god])
-      else setChaosBans(b=>[...b, god])
+      if(current.team === 'ORDER') {
+        setOrderBans(b=>[...b, god])
+      } else {
+        setChaosBans(b=>[...b, god])
+      }
     } else {
       // place pick in next empty slot of that team
       if(current.team === 'ORDER'){
@@ -161,7 +171,7 @@ export default function App(){
           const idx = next.findIndex(x=>x===null)
           if(idx !== -1) {
             next[idx] = god
-            actionRecord.slotIndex = idx
+            actionRecord.slot = idx
           }
           return next
         })
@@ -171,7 +181,7 @@ export default function App(){
           const idx = next.findIndex(x=>x===null)
           if(idx !== -1) {
             next[idx] = god
-            actionRecord.slotIndex = idx
+            actionRecord.slot = idx
           }
           return next
         })
@@ -180,8 +190,13 @@ export default function App(){
 
     setActionHistory(h => [...h, actionRecord])
 
-    // advance turn after selection
-    setTimeout(advance, 250)
+    // Send action via socket if online
+    if (sessionId && isConnected) {
+      sendDraftAction(actionRecord)
+    } else {
+      // For offline mode, advance turn locally
+      setTimeout(advance, 250)
+    }
   }
 
   if (isLoading) {
@@ -204,7 +219,7 @@ export default function App(){
               Smite Draft Tool
             </h1>
             <p className="text-gray-400 mt-1 text-sm lg:text-base">
-              Conquest Draft {isOnline && <span className="text-green-400">• Online</span>}
+              Conquest Draft {isOnline && <span className={isConnected ? "text-green-400" : "text-yellow-400"}>• {isConnected ? 'Connected' : 'Connecting...'}</span>}
             </p>
           </div>
           <div className="flex gap-2 lg:gap-3 w-full sm:w-auto">
