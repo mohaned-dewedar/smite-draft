@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDNTzK1cO4efH5s93fAYqGbE6LdvfHtp20",
-  authDomain: "smite-draft-d595b.firebaseapp.com",
-  projectId: "smite-draft-d595b",
-  storageBucket: "smite-draft-d595b.firebasestorage.app",
-  messagingSenderId: "668428709603",
-  appId: "1:668428709603:web:5747a8cdb7324c4d9bdfd6"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 }
 
 const app = initializeApp(firebaseConfig)
