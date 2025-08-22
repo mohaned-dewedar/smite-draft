@@ -28,10 +28,10 @@ export default function GodCard({god, onClick, disabled}){
   }
 
   return (
-    <button onClick={onClick} disabled={disabled} className={`group relative rounded overflow-hidden border ${disabled? 'opacity-40 cursor-not-allowed border-gray-700':'border-transparent hover:scale-105 transform transition'} bg-gray-800` }>
-  <img src={src} alt={god.name} className="w-full h-32 object-cover" onError={handleError} />
-      <div className="p-1 text-xs text-center">{god.name}</div>
-      {disabled && <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-sm">Unavailable</div>}
+    <button onClick={onClick} disabled={disabled} className={`group relative rounded overflow-hidden border ${disabled? 'opacity-40 cursor-not-allowed border-gray-700':'border-transparent hover:scale-105 transform transition active:scale-95'} bg-gray-800 min-h-[120px] lg:min-h-[140px]` }>
+      <img src={src} alt={god.name} className="w-full h-20 lg:h-32 object-cover" onError={handleError} />
+      <div className="p-1 text-xs lg:text-xs text-center leading-tight">{god.name}</div>
+      {disabled && <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-xs lg:text-sm">Unavailable</div>}
     </button>
   )
 }

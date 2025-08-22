@@ -4,14 +4,14 @@ export default function BanList({ title, bans, containerClass = "" }) {
   const isOrder = title.includes('Order')
   
   return (
-    <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-5 flex-1 min-w-72 border border-gray-700 shadow-xl">
-      <h4 className={`font-bold mb-4 text-center text-lg ${isOrder ? 'text-blue-400' : 'text-red-400'}`}>
+    <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-3 lg:p-5 flex-1 min-w-0 border border-gray-700 shadow-xl">
+      <h4 className={`font-bold mb-3 lg:mb-4 text-center text-base lg:text-lg ${isOrder ? 'text-blue-400' : 'text-red-400'}`}>
         {title}
       </h4>
-      <div className={`flex gap-3 justify-center ${containerClass}`}>
+      <div className={`flex gap-2 lg:gap-3 justify-center ${containerClass}`}>
         {Array.from({ length: 3 }).map((_, i) => (
           <div key={i} className="relative group">
-            <div className="w-20 h-20 bg-gray-700/50 rounded-lg overflow-hidden flex items-center justify-center border-2 border-gray-600/50 transition-all duration-200 group-hover:border-gray-500">
+            <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gray-700/50 rounded-lg overflow-hidden flex items-center justify-center border-2 border-gray-600/50 transition-all duration-200 group-hover:border-gray-500">
               {bans[i] ? (
                 <>
                   <img 
@@ -20,11 +20,11 @@ export default function BanList({ title, bans, containerClass = "" }) {
                     className="w-full h-full object-cover filter grayscale" 
                   />
                   <div className="absolute inset-0 bg-red-500/20 flex items-center justify-center">
-                    <div className="text-red-500 text-2xl font-bold transform rotate-12">✕</div>
+                    <div className="text-red-500 text-xl lg:text-2xl font-bold transform rotate-12">✕</div>
                   </div>
                 </>
               ) : (
-                <div className="text-gray-500 text-sm">Empty</div>
+                <div className="text-gray-500 text-xs lg:text-sm">Empty</div>
               )}
             </div>
             {bans[i] && (
