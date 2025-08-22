@@ -150,7 +150,7 @@ export default function App(){
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
+        <header className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Smite Draft Tool
@@ -172,9 +172,9 @@ export default function App(){
               🔄 Reset
             </button>
           </div>
-        </div>
+        </header>
         {/* Draft Status */}
-        <div className="text-center mb-6">
+        <section className="text-center mb-6" aria-live="polite" aria-label="Draft Status">
           <div className="inline-flex items-center gap-2 bg-gray-800 px-6 py-3 rounded-full border border-gray-700">
             {current ? (
               <>
@@ -196,33 +196,34 @@ export default function App(){
               </>
             )}
           </div>
-        </div>
+        </section>
 
         {/* Ban Section */}
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4 text-center">Banned Gods</h2>
+        <section className="mb-8" aria-labelledby="banned-gods-heading">
+          <h2 id="banned-gods-heading" className="text-xl font-semibold mb-4 text-center">Banned Gods</h2>
           <div className="flex gap-6 justify-center">
             <BanList title="Order Bans" bans={orderBans} />
             <BanList title="Chaos Bans" bans={chaosBans} />
           </div>
-        </div>
+        </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          <div className="lg:col-span-1">
+        <main className="grid grid-cols-1 lg:grid-cols-5 gap-6" role="main">
+          <aside className="lg:col-span-1" aria-label="Order team">
             <TeamPanel title="ORDER" picks={orderPicks} bans={orderBans} active={current?.team==='ORDER'} />
-          </div>
+          </aside>
 
-          <div className="col-span-1 lg:col-span-3">
+          <section className="col-span-1 lg:col-span-3" aria-labelledby="god-selection-heading">
             <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-5 border border-gray-700 shadow-xl">
+              <h2 id="god-selection-heading" className="sr-only">God Selection</h2>
               <FilterBar roleFilter={roleFilter} setRoleFilter={setRoleFilter} />
               <GodGrid gods={gods} onSelectGod={onSelectGod} disabledIds={pickedOrBannedIds} roleFilter={roleFilter} setRoleFilter={setRoleFilter} />
             </div>
-          </div>
+          </section>
 
-          <div className="lg:col-span-1">
+          <aside className="lg:col-span-1" aria-label="Chaos team">
             <TeamPanel title="CHAOS" picks={chaosPicks} bans={chaosBans} active={current?.team==='CHAOS'} rightAligned />
-          </div>
-        </div>
+          </aside>
+        </main>
       </div>
     </div>
   )
