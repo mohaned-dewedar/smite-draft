@@ -4,6 +4,8 @@ import GodGrid from './components/GodGrid'
 import FilterBar from './components/FilterBar'
 import BanList from './components/BanList'
 import gods from './data/gods_merged_local.json'
+import { useSession } from './hooks/useSession'
+import { useDraftSync } from './hooks/useDraftSync'
 
 // Draft sequence is configurable. For this scaffolding we use a simplified sequence:
 // O = Order, C = Chaos, BAN/PICK
@@ -27,13 +29,31 @@ const DRAFT_SEQUENCE = [
 ]
 
 export default function App(){
-  // Minimal state to implement single-user draft flow
-  const [orderPicks, setOrderPicks] = useState(Array(5).fill(null))
-  const [chaosPicks, setChaosPicks] = useState(Array(5).fill(null))
-  const [orderBans, setOrderBans] = useState([])
-  const [chaosBans, setChaosBans] = useState([])
-  const [seqIndex, setSeqIndex] = useState(0)
-  const [actionHistory, setActionHistory] = useState([])
+  const { sessionId, isOnline, createSession } = useSession()
+  
+  // Initial state for both local and online modes
+  const initialState = {
+    orderPicks: Array(5).fill(null),
+    chaosPicks: Array(5).fill(null),
+    orderBans: [],
+    chaosBans: [],
+    seqIndex: 0,
+    actionHistory: []
+  }
+
+  // Use sync hook for online sessions, local state for offline
+  const { state, setState, isLoading } = useDraftSync(sessionId, initialState)
+  
+  // Destructure state for easier access
+  const { orderPicks, chaosPicks, orderBans, chaosBans, seqIndex, actionHistory } = state
+  
+  // Local state setters that work with both modes
+  const setOrderPicks = (value) => setState(prev => ({ ...prev, orderPicks: typeof value === 'function' ? value(prev.orderPicks) : value }))
+  const setChaosPicks = (value) => setState(prev => ({ ...prev, chaosPicks: typeof value === 'function' ? value(prev.chaosPicks) : value }))
+  const setOrderBans = (value) => setState(prev => ({ ...prev, orderBans: typeof value === 'function' ? value(prev.orderBans) : value }))
+  const setChaosBans = (value) => setState(prev => ({ ...prev, chaosBans: typeof value === 'function' ? value(prev.chaosBans) : value }))
+  const setSeqIndex = (value) => setState(prev => ({ ...prev, seqIndex: typeof value === 'function' ? value(prev.seqIndex) : value }))
+  const setActionHistory = (value) => setState(prev => ({ ...prev, actionHistory: typeof value === 'function' ? value(prev.actionHistory) : value }))
 
   const current = DRAFT_SEQUENCE[seqIndex]
 
@@ -67,12 +87,25 @@ export default function App(){
   }
 
   function resetDraft(){
-    setOrderPicks(Array(5).fill(null))
-    setChaosPicks(Array(5).fill(null))
-    setOrderBans([])
-    setChaosBans([])
-    setSeqIndex(0)
-    setActionHistory([])
+    setState(initialState)
+  }
+
+  async function handleShareSession(){
+    try {
+      if (isOnline) {
+        // Already in a session, just copy URL
+        await navigator.clipboard.writeText(window.location.href)
+        alert('Session link copied to clipboard!')
+      } else {
+        // Create new session with current state
+        console.log('Creating session with state:', state)
+        await createSession(state)
+        alert('Session created! Share this URL with others.')
+      }
+    } catch (error) {
+      console.error('Error sharing session:', error)
+      alert('Failed to create session. Check console for details.')
+    }
   }
 
   function undoLastAction(){
@@ -151,6 +184,17 @@ export default function App(){
     setTimeout(advance, 250)
   }
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
+          <p className="text-gray-400">Loading session...</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white p-3 lg:p-6">
       <div className="max-w-7xl mx-auto">
@@ -159,9 +203,17 @@ export default function App(){
             <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Smite Draft Tool
             </h1>
-            <p className="text-gray-400 mt-1 text-sm lg:text-base">Conquest Draft</p>
+            <p className="text-gray-400 mt-1 text-sm lg:text-base">
+              Conquest Draft {isOnline && <span className="text-green-400">• Online</span>}
+            </p>
           </div>
           <div className="flex gap-2 lg:gap-3 w-full sm:w-auto">
+            <button 
+              onClick={handleShareSession}
+              className="flex-1 sm:flex-none bg-green-600 hover:bg-green-700 text-white px-3 lg:px-5 py-2 lg:py-2.5 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-green-500/25 text-sm lg:text-base"
+            >
+              🔗 {isOnline ? 'Copy Link' : 'Share'}
+            </button>
             <button 
               onClick={undoLastAction}
               disabled={actionHistory.length === 0}
