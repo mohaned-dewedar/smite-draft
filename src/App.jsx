@@ -42,6 +42,10 @@ export default function App(){
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.key === 'Backspace' || e.key === 'Delete') {
+        // Don't trigger undo if user is typing in an input field
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') {
+          return
+        }
         e.preventDefault()
         undoLastAction()
       }
