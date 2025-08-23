@@ -1,7 +1,8 @@
 {
+  "ws": true,
   "functions": {
     "api/socket.js": {
-      "maxDuration": 30
+      "maxDuration": 300
     }
   },
   "rewrites": [
