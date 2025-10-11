@@ -312,7 +312,7 @@
     "name": "Hou Yi",
     "pantheon": "Chinese",
     "title": "Defender of the Earth",
-    "imageUrl": "/assets/gods/hou_yi.png",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_HouYi_Default_Icon.png/96px-T_HouYi_Default_Icon.png?2765c",
     "role": [
       "Carry"
     ],
@@ -356,7 +356,7 @@
     "name": "Janus",
     "pantheon": "Roman",
     "title": "God of Portals and Transitions",
-    "imageUrl": "/assets/gods/janus.png",
+    "imageUrl": "https://wiki.smite2.com/images/thumb/T_Janus_Default_Icon.png/96px-T_Janus_Default_Icon.png?1685a",
     "role": [
       "Mid"
     ],
@@ -372,6 +372,17 @@
       "Carry"
     ],
     "source_url": "https://wiki.smite2.com/w/Jing_Wei"
+  },
+  {
+    "id": "god_jormungandr",
+    "name": "Jormungandr",
+    "pantheon": "Norse",
+    "title": "The World Serpent",
+    "imageUrl": "/assets/gods/Jorumngandr.jpg",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Jormungandr"
   },
   {
     "id": "god_kali",
@@ -649,6 +660,17 @@
     "source_url": "https://wiki.smite2.com/w/Thor"
   },
   {
+    "id": "god_tsukuyomi",
+    "name": "Tsukuyomi",
+    "pantheon": "Japanese",
+    "title": "God of the Moon",
+    "imageUrl": "/assets/gods/Tsukuyomi.jpg",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Tsukuyomi"
+  },
+  {
     "id": "god_ullr",
     "name": "Ullr",
     "pantheon": "Norse",
@@ -669,6 +691,17 @@
       "Mid"
     ],
     "source_url": "https://wiki.smite2.com/w/Vulcan"
+  },
+  {
+    "id": "god_xbalanque",
+    "name": "Xbalanque",
+    "pantheon": "Maya",
+    "title": "Hidden Jaguar Sun",
+    "imageUrl": "/assets/gods/Xbalanque.png",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Xbalanque"
   },
   {
     "id": "god_yemoja",
@@ -702,38 +735,5 @@
       "Mid"
     ],
     "source_url": "https://wiki.smite2.com/w/Zeus"
-  },
-  {
-    "id": "god_jormungandr",
-    "name": "Jormungandr",
-    "pantheon": "Norse",
-    "title": "The World Serpent",
-    "imageUrl": "/assets/gods/Jorumngandr.jpg",
-    "role": [
-      "Solo"
-    ],
-    "source_url": "https://wiki.smite2.com/w/Jormungandr"
-  },
-  {
-    "id": "god_tsukuyomi",
-    "name": "Tsukuyomi",
-    "pantheon": "Japanese",
-    "title": "God of the Moon",
-    "imageUrl": "/assets/gods/Tsukuyomi.jpg",
-    "role": [
-      "Jungle"
-    ],
-    "source_url": "https://wiki.smite2.com/w/Tsukuyomi"
-  },
-  {
-    "id": "god_xbalanque",
-    "name": "Xbalanque",
-    "pantheon": "Maya",
-    "title": "Hidden Jaguar Sun",
-    "imageUrl": "/assets/gods/Xbalanque.png",
-    "role": [
-      "Carry"
-    ],
-    "source_url": "https://wiki.smite2.com/w/Xbalanque"
   }
 ]
