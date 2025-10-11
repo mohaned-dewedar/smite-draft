@@ -702,5 +702,38 @@
       "Mid"
     ],
     "source_url": "https://wiki.smite2.com/w/Zeus"
+  },
+  {
+    "id": "god_jormungandr",
+    "name": "Jormungandr",
+    "pantheon": "Norse",
+    "title": "The World Serpent",
+    "imageUrl": "/assets/gods/Jorumngandr.jpg",
+    "role": [
+      "Solo"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Jormungandr"
+  },
+  {
+    "id": "god_tsukuyomi",
+    "name": "Tsukuyomi",
+    "pantheon": "Japanese",
+    "title": "God of the Moon",
+    "imageUrl": "/assets/gods/Tsukuyomi.jpg",
+    "role": [
+      "Jungle"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Tsukuyomi"
+  },
+  {
+    "id": "god_xbalanque",
+    "name": "Xbalanque",
+    "pantheon": "Maya",
+    "title": "Hidden Jaguar Sun",
+    "imageUrl": "/assets/gods/Xbalanque.png",
+    "role": [
+      "Carry"
+    ],
+    "source_url": "https://wiki.smite2.com/w/Xbalanque"
   }
 ]
